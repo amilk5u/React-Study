@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>concat 배열을 복사를 한다</title>
+</head>
+<body>
+    <script>
+        const arr = [10,20,30]
+        arr.push(40)
+        arr.push(50)
+        arr.push(60)
+
+
+        // 배열의 값 변경
+        console.log(arr)
+
+        const arr1 = [10,20,30]
+        // 사본
+        const arr2 = arr1.concat()
+        console.log(arr1) //똑같다
+        console.log(arr2) //똑같다
+
+        // 사본을 복사한 후 값을 push 한다 (넣어준다)
+        const arr3 = arr1.concat(40,50,60)
+        console.log(arr3)
+
+        // 배열안에 객체를 생성하여 넣는다
+        const data = [
+            {id:1, name:'신민주1',age:21},
+            {id:2, name:'신민주2',age:22},
+            {id:3, name:'신민주3',age:23}
+        ]
+
+        console.log(data[0].id, data[0].name, data[0].age)
+        console.log('//////////////////')
+        const data1 = data.concat()
+        const data2 = data.concat({id:4, name:'유재석', age:50})
+        console.log(data1)
+        console.log(data2)
+
+
+        ///////////////////////////
+         const box1 = [{
+            name:"신민주",
+            age:"20",
+            vidw:"ddd"
+         },"아아앙"]
+         const box2 = ["신민주","20","ddd"]
+
+         console.log(box1.concat({"오오옹":"아러아러아","ㅁㄴㅁㄴㅁ":{"만":"ㅁㄴㅁㄴ"}}));
+
+
+   
+
+    </script>
+</body>
+</html> 

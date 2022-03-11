@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Document</title>
+</head>
+<body>    
+    <script>
+        const arr = ['강아지','고양이','토끼','소']
+        const arr1 = arr.concat() 
+        const arr3 = arr.concat('뱀','햄스터')
+        const arr2 = [...arr]
+        const arr4 = [...arr,'우산','딸기']
+        const arr5 = [ '과자', ...arr, '사탕']
+        
+
+        console.log( arr1 )
+        console.log( arr2 )
+        console.log( arr3 )
+        console.log( arr4 )
+        console.log( arr5 )
+
+
+        console.log( '/////////////////')
+        const dog = {
+            name:'강아지' , age:2 
+        }
+        
+        //수정 , 갱신 
+        const dog1 = { ...dog , name:'치와와', age:10 }
+        console.log( dog1 )
+
+
+    </script>
+
+    <pre>
+    
+    </pre>
+</body>
+</html>

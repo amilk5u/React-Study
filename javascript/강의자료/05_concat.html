@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const arr = [10,20,30]
+        arr.push(40)
+        arr.push(50)
+        arr.push(60)
+
+        //배열의 값이 변경 
+        console.log( arr )
+
+        const arr1 = [10,20,30]
+        //사본 
+        const arr2 = arr1.concat() 
+        console.log( arr1 )
+        console.log( arr2 )
+
+        const arr3 = arr1.concat(40,50,60)
+        console.log( arr3 )
+
+        const data = [
+            {id:1, name:'김다미' , age:20 },
+            {id:2, name:'최우식' , age:23 },
+            {id:3, name:'김진주' , age:22 },
+        ]
+        console.log( data[0].id , data[0].name, data[0].age)
+        console.log( '////////////////////////')
+        const data1 = data.concat()
+        const data2 = data.concat({id:4, name:'유재석', age:30})
+        console.log( data1 )
+        console.log( data2 )
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+    
+        const data = [
+            {id:1, name:'신민주1',age:21},
+            {id:2, name:'신민주2',age:22},
+            {id:3, name:'신민주3',age:23},
+            {id:4, name:'신민주4',age:24},
+            {id:5, name:'신민주5',age:25}
+        ]
+        const data1 = [...data]
+        console.log(data1)
+        console.log('////////////////')
+
+
+        // 문제 4번의 신민주4를 전지현 35로 변경하기
+        const data2 = [
+            ...data,
+            {
+                id:6,name:'유재석',age:30,
+            }
+        ]
+        console.log(data2)
+
+        const data3 = data.map((item, index) => {
+            if(item.id === 4) {
+                return {
+                    ...item,
+                    name:'전지현',
+                    age:35,
+                }
+            }else {
+                return item
+            }
+        })
+        console.log(data3)
+        console.log('////////////////')
+
+        const data4 = data.map(item => item.id === 1 ? {...item, name:'송혜교'} : item)
+        console.log(data4)
+
+
+        // 신민주4에 있는 이름을 유형모로 바꾼다
+        const data5 = data.map((item,index) => {
+            if (item.name === '신민주4') {
+               return {
+                  id:4, name:'유형모',age:30
+               }  
+            } else {
+               return item
+            }
+        })
+        console.log(data5);
+
+        // 간단하게 만드는 방법
+        const data6 = data.map((item, index) => {
+           return item.name === '신민주4' ? {id:4, name:'유형모',age:30} : item
+        })
+        console.log(data6);
+
+        // ...item 사용 (현재값 적용)
+        const data7 = data6.map((item, index) => {
+           return item.name === '유형모' ? {...item,name:'정발산'} : item
+           
+        })
+        console.log(data7);
+
+        
+
+
+
+
+  
+    </script>
+
+    <pre>
+
+    </pre>
+</body>
+</html> 

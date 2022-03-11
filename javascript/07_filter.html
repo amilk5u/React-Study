@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filter</title>
+</head>
+<body>
+   <script> 
+      const arr = [10,20,30,40,50,60]
+
+      // 객체.filter(현재값 => 조건)
+      // 조건에 맞는 값을 넣는다 (30보다 큰 배열을 출력)
+      const result1 = arr.filter(item => item > 30)
+      console.log(result1)
+
+      // 40와 같은 배열을 출력
+      const result2 = arr.filter(item => item === 40)
+      console.log(result2)
+
+      // 40을 제거한 나머지 배열만 출력
+      const result3 = arr.filter(item => item !== 40)
+      console.log(result3)
+
+      const data = [
+         {id:1, name:'신민주1',age:21},
+         {id:2, name:'신민주2',age:22},
+         {id:3, name:'신민주2',age:50},
+         {id:4, name:'최우식',age:23},
+         {id:5, name:'신민주2',age:40}
+      ]
+
+      // 최우식
+      const data1 = data.filter(any => any.name === '최우식')
+      console.log(data1)
+
+      const data2 = data.filter(item => item.name !== '최우식')
+      console.log(data2)
+
+
+      // 조건이 해당되는 것을 다 뽑아온다
+      const data3 = data.filter(item => item.name === '신민주2')
+      console.log(data3);
+
+      // 조건이 해당되는 것이 있으면 true를 반환한다
+      const data4 = data.some(item => item.name === '신민주2')
+      console.log(data4);
+
+
+
+      // 60을 제외한 나머지를 가져온다
+      const data5 = data.filter(item => item.name !== '최우식')
+      console.log(data5);
+
+
+
+   </script>
+</body>
+</html> 

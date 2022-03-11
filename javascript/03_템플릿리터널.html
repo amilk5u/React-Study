@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>템플릿리터널</title>
+</head>
+<body>
+    <script>
+        // react JSX 문법안에서 연산자 3개만 조건문처럼 사용가능 - if X and for X
+        // 함수영역에서는 모든 연산자 제어문 사용가능
+
+        const test1 = true
+        const test2 = false
+        const test3 = undefined
+        const test4 = "ㅇㅇㅇ"
+        const box = '민주'
+        
+        // 같다 === , 다르다 !==  (완전일치 X 그냥 같다 / 그냥 다르다라는 뜻 자바스크립트와의 개념과는 다름)
+        // 삼항연산자 if 문쓰면 안된다 (조건) ? (참) : (거짓)
+        const result1 = test1 === true ? '참' : '거짓'
+        const result1_1 = test1 === '민주' ? '민주가 맞다' : '아니다'
+        console.log(result1_1)
+        console.log(result1)
+
+
+        const box1 = true === true ? 'true이다' : 'true 가 아니다'
+        console.log(box1)
+
+
+        // 조건 && '조건에 대한 결과가 참 일때'
+        const result2 = test1 && '참 일때 대한 결과물'
+        console.log(result2)
+        console.log(test1 && '참이다?')
+
+        const box2 = "sss" && "tererre"
+        console.log('now :'+box2)
+
+        // 조건 || '조건에 대한 결과가 거짓일 때'
+        const result3_1 = test4 || '거짓의 결과'
+        const result3 = test2 || '거짓의 결과'
+        const result4 = test3 || '값이 존재 하지않음'
+        console.log(result3_1)
+        console.log(result3)
+        console.log(result4)
+
+        const box3 = "aaa" || "거짓?"
+        console.log('now :'+ box3)
+
+        const result5 = box || '거짓의 결과'
+        console.log(result5)
+
+
+        function example (condition1,condition2,condition3,condition4) {
+         return condition1 == 1 ? "01"
+               : condition2 == 2 ? "02"
+               : condition3 == 3 ? "03"
+               : "04"
+         }
+         console.log(example(1,2,3,4));
+         // 위의 코드는 아래의 코드와 동일합니다.
+
+         // function example(condition1,condition2,condition3,condition4) {
+         //    if (condition1 == 1) { return "01"; }
+         //    else if (condition2 == 2) { return "02"; }
+         //    else if (condition3 == 3) { return "03"; }
+         //    else { return "04"; }
+         // }
+         // console.log(example(0,0,3,4));
+
+
+        // 다중 if문처럼 사용하고 싶을 경우
+        // 조건1 && '결과1'
+        // 조건2 && '결과2'
+        // 조건3 && '결과3'
+        // 조건4 && '결과4'
+
+
+        const min = true
+        const min1 = min === true && "민주"
+        console.log(min1)
+
+        const min2 = true
+
+        if(min2) {
+           console.log("민주다");
+        }
+
+        const min3 = min2 !== true && "민주다"
+        console.log(min3);
+            
+
+        
+    </script>
+    
+</body>
+</html> 

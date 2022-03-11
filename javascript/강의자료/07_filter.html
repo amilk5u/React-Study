@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const arr = [10,20,30,40 , 50,60]
+        
+        //객체.filter( 현재값  => 조건 )
+        const result1  = arr.filter( item => item > 30 )
+        console.log( result1 )
+
+        const result2  = arr.filter( item => item === 40 )
+        console.log( result2 )
+
+        // 40을 삭제한 나머지만 출력 
+        const result3  = arr.filter( item => item !== 40 )
+        console.log( result3 )
+
+        const data = [
+            {id:1, name:'김다미' , age:20 },
+            {id:2, name:'최우식' , age:23 },
+            {id:3, name:'김진주' , age:22 },
+        ]
+
+        //최우식 
+        const data1 = data.filter( item => item.name === '최우식')
+        console.log( data1 )
+
+        // id 2번 삭제 
+        const data2  = data.filter( item => item.id !== 2 )
+        console.log( data2 )
+        
+    </script>
+
+    <pre>
+        https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+        arr.map(callback(currentValue[, index[, array]])[, thisArg])
+        
+        arr.filter(callback(element[, index[, array]])[, thisArg])
+
+        arr.filter( 현재값  => 조건 ) => 결과 배열출력 
+        arr.find( 현재값  => 조건 ) => 결과 하나의값 
+        arr.findIndex( 현재값  => 조건 ) => 인덱스번호 
+
+
+        callback
+        각 요소를 시험할 함수. true를 반환하면 요소를 유지하고, false를 반환하면 버립니다. 다음 세 가지 매개변수를 받습니다.
+        element
+        처리할 현재 요소.
+        index Optional
+        처리할 현재 요소의 인덱스.
+        array Optional
+        filter를 호출한 배열.
+        thisArg Optional
+        callback을 실행할 때 this로 사용하는 값.
+        반환 값
+        테스트를 통과한 요소로 이루어진 새로운 배열. 어떤 요소도 테스트를 통과하지 못했으면 빈 배열을 반환합니다.
+    </pre>
+</body>
+</html>

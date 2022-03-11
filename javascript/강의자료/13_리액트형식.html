@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+<body>
+    <div id="root">화면에보이는 영역</div>
+    <script type="text/babel">
+       const title ='신상명세서'
+       const name ='홍길동'
+       const age = 20
+       const tel = '010-0000-1111'
+       
+       const el  = <div>
+                <h2> {title} </h2>
+                <ul>
+                    <li> 이름 : {name} </li>
+                    <li> 나이 : {age} </li>
+                    <li> 전화 : {tel} </li>
+                </ul>
+           </div>
+       const dom  = document.querySelector('#root') 
+       ReactDOM.render( el , dom )    
+    </script>
+</body>
+</html>

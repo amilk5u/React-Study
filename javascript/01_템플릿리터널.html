@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var를 const let 으로 바꿔 사용하는 이유</title>
+</head>
+<body>
+    <script>
+        const a = 100
+        {
+         const a = 50
+           console.log(a)
+            {
+               const a = 200
+                console.log(a)
+                {
+                  const a = 300
+                    console.log(a)
+                }
+                console.log(a)
+            }
+        }
+        console.log(a)
+    </script>
+    
+</body>
+</html>

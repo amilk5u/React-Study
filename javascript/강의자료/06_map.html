@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const arr = [10,20,30]
+        
+
+        //map 반복문 - jsx영역 
+        /*
+            arr.map( (현재값, 인덱스) => {
+                return 반환값
+            })
+        */
+
+        arr.map( (item , index) => {
+            return (console.log( index , item ))
+        })
+        console.log('///////////////')
+        //결과가 하나일때는 {} return 생략가능 
+        arr.map( (item, idx) => console.log(idx, item ))
+
+        console.log('///////////////')
+        const data = [
+            {id:1, name:'김다미' , age:20 },
+            {id:2, name:'최우식' , age:23 },
+            {id:3, name:'김진주' , age:22 },
+        ]
+        data.map(( item, index) => {
+            return ( console.log( item.id, item.name, item.age))
+        })
+        console.log('///////////////')
+        data.map( (item, index) => console.log( item.id, item.name, item.age))
+    </script>
+
+    <pre>
+        https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+        arr.map(callback(currentValue[, index[, array]])[, thisArg])
+        
+        매개변수
+        callback
+        새로운 배열 요소를 생성하는 함수. 다음 세 가지 인수를 가집니다.
+        currentValue
+        처리할 현재 요소.
+        index Optional
+        처리할 현재 요소의 인덱스.
+        array Optional
+        map()을 호출한 배열.
+        thisArg Optional
+        callback을 실행할 때 this로 사용되는 값.
+        반환 값
+        배열의 각 요소에 대해 실행한 callback의 결과를 모은 새로운 배열.
+    </pre>
+</body>
+</html>

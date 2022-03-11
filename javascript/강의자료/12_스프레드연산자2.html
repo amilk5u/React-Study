@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Document</title>
+</head>
+<body>    
+    <script>
+         const data =[
+             {id:1, name:'홍길동', age: 5} ,
+             {id:2, name:'강호동', age: 10} ,
+             {id:3, name:'최우식', age: 20} ,
+             {id:4, name:'김다미', age: 30} ,
+             {id:5, name:'이효리', age: 15} ,
+         ]
+         const data1  = [ ...data ]
+         console.log( data1 )
+         console.log( '//////////////////' )
+         const data2  = [
+             ...data ,
+             {
+                 id:6 ,
+                 name:'유재석',
+                 age :16
+             }
+         ]
+         console.log( data2 )
+         console.log( '//////////////////' )  
+         //문제 4번의 김다미를 전지현 , 35로 변경하기 
+         const data3 = data.map( (item, index ) => {
+             if( item.id === 4 ){
+                 return {
+                     ...item ,
+                     name:'전지현' ,
+                     age : 35
+                 }
+             }else{
+                 return item 
+             }
+         })
+         
+         console.log( data3 )
+         console.log( '//////////////////' )  
+
+         const data4 = data.map( item => item.id === 1 ? {...item, name:'송혜교'} : item )
+         console.log( data4 )
+
+    </script>
+
+    <pre>
+    
+    </pre>
+</body>
+</html>
