@@ -30,16 +30,8 @@ const Test10 = () => {
     const onColor3 = () => {
         setColor('pink')
     }
-    const onAge1 = () => {
-        setAge(16)
-    }
-    const onAge2 = () => {
-        setAge(15)
-    }
-    const onAge3 = () => {
-        setAge(14)
-    }
-    
+
+   
     return (
         <div>
             <h2 style={{backgroundColor:color}}>
@@ -58,9 +50,9 @@ const Test10 = () => {
                 <button onClick={ onColor3 }>pink</button>
             </p>
             <p>
-                <button onClick={ onAge1 }>16살</button>
-                <button onClick={ onAge2 }>15살</button>
-                <button onClick={ onAge3 }>14살</button>
+                <button onClick={ () => setAge(16) }>16살</button>
+                <button onClick={ () => setAge(15) }>15살</button>
+                <button onClick={ () => setAge(14) }>14살</button>
             </p>
         </div>
     );

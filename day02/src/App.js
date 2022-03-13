@@ -1,9 +1,9 @@
-import Test10 from './components/Test10';
+import Test12 from './components/Test12';
 
 const App = () => {
     return (
         <>
-            <Test10 />
+            <Test12 />
         </>
     );
 };
