@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>템플릿리터널</title>
+</head>
+<body>
+    <script>
+        const arr = [10,20,30,40,50,60]
+
+        // 객체.find(현재값=>조건) : 값 결과
+        // 원하는 값 하나만 출력됨
+        const arr1 = arr.find(item => item > 40)
+        console.log(arr1)
+
+        const arr2 = arr.find(item => item === 20)
+        console.log(arr2)
+
+        const data = [
+            {id:1, name:'신민주1',age:21},
+            {id:2, name:'신민주2',age:22},
+            {id:3, name:'최우식',age:23}
+        ]
+
+        // 아이디가 1인 것의 데이터를 가져와라
+        const data1 = data.find(item => item.id === 1)
+        console.log(data1)
+
+        // id가 1에 인덱스를 가져와라
+        const data2 = data.findIndex(item => item.id === 1)
+        console.log(data2)
+
+        // 데이터가 30인 데이터를 1개 가져와라
+        const box1 = arr.find(item => item === 30)
+        console.log(box1)
+
+        // 데이터가 30이 아닌 나머지의 데이터를 모두 가져와라
+        const box2 = arr.filter(item => item !== 30)
+        console.log(box2);
+
+        // 데이터에 최우식이 있는 것의 인덱스를 가져와라
+        const box3 = data.findIndex(item => item.name === "최우식")
+        console.log(box3);
+
+        // 데이터 나이가 22이가 아닌 나머지의 데이터를 가져와라
+        const box4 = data.filter(item => item.age !== 22)
+        console.log(box4);
+    </script>
+    <pre>
+        arr.filter( 현재값 => 조건 ) => 결과 배열출력
+        arr.find( 현재값 => 조건 ) => 결과 하나의값
+        arr.findIndex( 현재값 => 조건 ) => 인덱스 번호
+
+
+        const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+        console.log(beasts.indexOf('bison'));
+        // expected output: 1
+
+        // start from index 2
+        console.log(beasts.indexOf('bison', 2));
+        // expected output: 4
+
+        console.log(beasts.indexOf('giraffe'));
+        // expected output: -1
+
+    </pre>
+</body>
+</html> 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+      // indexOf 공부하기.....
+      const arr = ['고구마','감자','김치','고단백','고고공']
+      const txt1 = '공'
+      const result1 = arr.filter(item => item.indexOf(txt1) !== -1)
+      console.log(result1)
+
+      const data = [
+         {text:'운동을 하다'},
+         {text:'용기를 내다'},
+         {text:'퇴근을 하다'},
+         {text:'저녁을 먹다'},
+         {text:'친구를 만나다'},
+         {text:'스쿼시를 했다'},
+         {text:'잠을 자다'},
+         {text:'밥을 하다'},
+      ]
+      const txt2 = '하다'
+      const result2 = data.filter(item => item.text.indexOf(txt2) !== -1 )
+      console.log(result2)
+      
+      const arr2 = ['신민주하하하','롤로로로','민주야야야','로루라미쥬','민조','민주당!!']
+      const txt3 = ['민주']
+      const txt4 = ['저녁']
+
+      // arr2에서 민주가 없는 데이터가 아닌 것을 가져와라 = 민주가 포함된 것을 가져와라
+      const result3 = arr2.filter(item => item.indexOf(txt3) !== -1)
+      console.log(result3)
+
+      // text 에 친구를 만나다를 빼고 나머지를 가져와라
+      const result4 = data.filter(item => item.text !== '친구를 만나다')
+      console.log(result4)
+      // data 에 있는 text에서 '저녁' 을 뺀 나머지의 데이터를 가져와라
+      const result5 = data.filter(item => item.text.indexOf(txt4) === -1)
+      console.log(result5);
+
+    </script>
+
+    <pre>
+        arr.filter( 현재값 => 조건 ) => 결과 배열출력
+        arr.find( 현재값 => 조건 ) => 결과 하나의값
+        arr.findIndex( 현재값 => 조건 ) => 인덱스 번호
+
+        const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+        console.log(beasts.indexOf('bison'));
+        // expected output: 1
+
+        // start from index 2
+        console.log(beasts.indexOf('bison', 2));
+        // expected output: 4
+
+        console.log(beasts.indexOf('giraffe'));
+        // expected output: -1
+    </pre>
+</body>
+</html> 
