@@ -1,28 +1,33 @@
-import React from "react"
-import { useState } from "react"
+import React, { useState } from 'react';
 
 const Test11 = () => {
+    const [ isChk  , setIsChk ] = useState( false )
+    const onColor  = (e)  => {
+        const { checked } = e.target 
+        setIsChk( checked )
+    }
 
-   // const checkbox = true
-   const [isBox, setBox] = useState(false)
-
-   const onChk = (e) => {
-      setBox(!isBox)
-   }
-
-   return (
-      <div style={{ margin: '20px' }}>
-         <p>
-            <input type="checkbox" checked={isBox} onChange={onChk} />
+    return (
+        <div style={{margin:20}}>
+            <p>
+            <input type="checkbox" checked={ isChk } onChange={ onColor }  />            
             {
-               isBox ? '숨기기' : '보이기'
+                isChk ? '숨기기' : '보이기'
             }
-         </p>
-         {
-            isBox && <div style={{ width: '200px', height: '200px', backgroundColor: 'skyblue' }}></div>
-         }
-      </div>
-   );
+            </p>
+
+            {
+                isChk ? <div style={{width:200, height:100, background:'hotpink'}}></div>
+                : null 
+            }
+            <hr/>
+
+            {
+                isChk && <div style={{width:200, height:100, background:'hotpink'}}></div>
+            }
+
+        </div>
+    );
 };
 
 export default Test11;
