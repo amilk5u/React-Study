@@ -1,13 +1,9 @@
-import Test6 from './components/Test6';
-// import Business from './sample1/Business';
-// import MainTest from './sample1/MainTest';
+import Test13 from './components/Test13';
 
 const App = () => {
    return (
       <div>
-         <Test6 />
-         {/* <MainTest/> */}
-         {/* <Business /> */}
+         <Test13 />
       </div >
    );
 };

@@ -1,6 +1,8 @@
 import { useState } from 'react'
+import { useRef } from 'react'
 
-const Test6 = () => {
+const Test7 = () => {
+   const idRef = useRef(null)
    const [userId, setUserId] = useState('')
    const [userPw, setUserPw] = useState('')
 
@@ -18,11 +20,12 @@ const Test6 = () => {
    const onReset = () => {
       setUserId('')
       setUserPw('')
+      idRef.current.focus()
    }
 
    return (
       <div>
-         <input type="text" onChange={changeInput1} value={userId}/>
+         <input type="text" onChange={changeInput1} value={userId} ref={idRef}/>
          <input type="text" onChange={changeInput2} value={userPw} />
          <button onClick={onReset}>초기화</button>
          <h2>
@@ -32,4 +35,4 @@ const Test6 = () => {
    );
 };
 
-export default Test6;
+export default Test7;
