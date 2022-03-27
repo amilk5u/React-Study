@@ -21,6 +21,39 @@ const Test5 = () => {
       alert(num + '번째줄을 삭제한다')
       setData(data.filter(item => item.id !== num))
    }
+   const onAdd1 = () => {
+      setData(data.concat({ id: 6, name: '이광수' }))
+   }
+   const onAdd2 = () => {
+      setData([...data, { id: 7, name: '양세찬' }])
+   }
+   // 인자와 키값이 같을 경우에 (:) 생략하고 합쳐서 사용할 수 있다
+   const onAdd3 = (name) => {
+      setData([...data, { id: 8, name /* name:name */ }])
+   }
+
+   const onMod1 = () => {
+      setData(
+         data.map(item => {
+            if (item.id === 5) {
+               return {
+                  ...item,
+                  name: '전소민'
+               }
+            } else {
+               return item
+            }
+         })
+      )
+   }
+   const onMod2 = () => {
+      setData(data.map(item => item.id === 4 ? {...item, name:"이광수"} : item))
+   }
+   const onMod3 = (num) => { 
+      setData(
+         data.map(item => item.id === num ? {...item, name:'양세찬'} : item)
+      )
+   }
 
    return (
       <div>
@@ -32,22 +65,17 @@ const Test5 = () => {
             <button onClick={() => onDel3(4)}>4삭제</button>
          </p>
          <p>
-            <button>추가</button>
-            <button>추가</button>
-            <button>추가</button>
+            <button onClick={onAdd1}>추가</button>
+            <button onClick={onAdd2}>추가</button>
+            <button onClick={() => onAdd3('전소민')}>추가</button>
          </p>
          <p>
-            <button>수정</button>
-            <button>수정</button>
-            <button>수정</button>
+            <button onClick={onMod1}>수정</button>
+            <button onClick={onMod2}>수정</button>
+            <button onClick={() => onMod3(1)}>수정</button>
          </p>
          <hr />
          <ul>
-            {/* {
-               arr.map((item, index) => {
-                  return (<li key={index}>{index} / {item}</li>)
-               })
-            } */}
             {
                // 1 / 유재석
                data.map((item, index) => {
