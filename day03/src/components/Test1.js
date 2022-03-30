@@ -4,8 +4,8 @@ import { useState } from 'react'
 const Test1 = () => {
    const [count, setCount] = useState(0)
 
-   const onUp = () => { setCount( count + 1 ) }
-   const onDown = () => { setCount(count-1) }
+   const onUp = () => { setCount(count + 1) }
+   const onDown = () => { setCount(count - 1) }
    const onReset = () => { setCount(0) }
 
    return (
@@ -19,15 +19,14 @@ const Test1 = () => {
       </div>
    );
 };
-
 export default Test1;
 
 /* 
-useState: 유동으로 변경될때 - import useState
-React.useState
-const [상태데이터, setter함수] = useState(초기값)
-setter함수(값, 수식)
+   useState: 유동으로 변경될때 - import useState
+   React.useState
+   const [상태데이터, setter함수] = useState(초기값)
+   setter함수(값, 수식)
 
-const [상태데이터, setter함수] = useState(초기값)
-const [상태데이터] = useState(초기값)  <-변경안하고 사용할 때 
+   const [상태데이터, setter함수] = useState(초기값)
+   const [상태데이터] = useState(초기값)  <-변경안하고 사용할 때 
 */

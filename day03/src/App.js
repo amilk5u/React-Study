@@ -1,9 +1,9 @@
-import Business from './sample1/Business';
+import Test3 from './components/Test3';
 
 const App = () => {
    return (
       <div>
-         <Business />
+         <Test3 />
       </div >
    );
 };
