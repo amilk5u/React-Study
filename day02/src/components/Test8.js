@@ -26,10 +26,6 @@ const Test8 = () => {
             <p>
                 <button onClick={ () => {
                     console.log("test2")
-                    console.log("test2")
-                    console.log("test2")
-                    console.log("test2")
-                    console.log("test2")
                     // 여러 줄일 경우에는 {}생략하지말고 그안에 작성한다
                 }
                 }>클릭 1</button>

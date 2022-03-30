@@ -2,52 +2,42 @@ import React, { useState } from 'react';
 
 const Test10 = () => {
 
-    const [name, setName] = useState('신민주')
-    const [color, setColor] = useState('pink')
-    const [age, setAge] = useState(5)
+   // useState Default 값 설정
+   const [name, setName] = useState('신민주')
+   const [color, setColor] = useState('pink')
+   const [age, setAge] = useState(5)
    
-    const onName1 = () => setName('야옹이')
-    const onName2 = () => {
-        setName('나비')
-    }
-    const onName3 = () => {
-        setName('천국이')
-    }
-    const onColor1 = () => {
-        setColor('blue')
-    }
-    const onColor2 = () => {
-        setColor('red')
-    }
-    const onColor3 = () => {
-        setColor('pink')
-    }
+   const onName1 = () => setName('야옹이')
+   const onName2 = () => setName('나비')
+   const onName3 = () => setName('천국이')
+   const onColor1 = () => setColor('blue')
+   const onColor2 = () => setColor('red')
+   const onColor3 = () => setColor('pink')
 
-   
-    return (
-        <div>
-            <h2 style={{backgroundColor:color}}>
-                이름 : {name},
-                나이 : {age}살,
-                컬러 : {color},
-            </h2>
-            <p>
-                <button onClick={ onName1 }>야옹이</button>
-                <button onClick={ onName2 }>나비</button>
-                <button onClick={ onName3 }>천국이</button>
-            </p>
-            <p>
-                <button onClick={ onColor1 }>blue</button>
-                <button onClick={ onColor2 }>red</button>
-                <button onClick={ onColor3 }>pink</button>
-            </p>
-            <p>
-                <button onClick={ () => setAge(16) }>16살</button>
-                <button onClick={ () => setAge(15) }>15살</button>
-                <button onClick={ () => setAge(14) }>14살</button>
-            </p>
-        </div>
-    );
+   return (
+      <div>
+         <h2 style={{ backgroundColor: color }}>
+            이름 : {name},
+            나이 : {age}살,
+            컬러 : {color},
+         </h2>
+         <p>
+            <button onClick={onName1}>야옹이</button>
+            <button onClick={onName2}>나비</button>
+            <button onClick={onName3}>천국이</button>
+         </p>
+         <p>
+            <button onClick={onColor1}>blue</button>
+            <button onClick={onColor2}>red</button>
+            <button onClick={onColor3}>pink</button>
+         </p>
+         <p>
+            <button onClick={() => setAge(16)}>16살</button>
+            <button onClick={() => setAge(15)}>15살</button>
+            <button onClick={() => setAge(14)}>14살</button>
+         </p>
+      </div>
+   );
 };
 
 export default Test10;

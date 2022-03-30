@@ -1,49 +1,50 @@
 const Test9 = () => {
-    const title = '신상명세서'
-    const arr = ['야옹이', '나비', '천국이', '길냥이', '번개', '져씨']
-    const data = [
-        { id: 1, name: '야옹이' },
-        { id: 2, name: '나비' },
-        { id: 3, name: '천국이' },
-        { id: 4, name: '길냥이' },
-        { id: 5, name: '번개' },
-        { id: 6, name: '져씨' }
-    ]
+   const title = '신상명세서'
+   const arr = ['야옹이', '나비', '천국이', '길냥이', '번개', '져씨']
+   const data = [
+      { id: 1, name: '야옹이' },
+      { id: 2, name: '나비' },
+      { id: 3, name: '천국이' },
+      { id: 4, name: '길냥이' },
+      { id: 5, name: '번개' },
+      { id: 6, name: '져씨' }
+   ]
+   const css = {padding:10, margin:10, color:'green', fontSize:35}
 
-    return (
-        <div>
-            <h2>{title}</h2>
-            <ul>
-                {
-                    arr.map((item, index) => {
-                        return (<li key={index}>{index} / {item}</li>)
-                    })
-                }
-            </ul>
-            <hr />
-            <ul>
-                {
-                    arr.map((item, index) => <li key={index}>{index} / {item}</li>)
-                }
-            </ul>
-            <hr />
-            <ul>
-                {
-                    data.map((item, index) => {
-                        return (<li key={item.id}>{item.id} / {item.name}</li>)
-                    })
-                }
-            </ul>
-            <hr />
-            <ul>
-                {
-                    data.map((item, index) =>
-                        <li key={item.id}>{item.id} / {item.name}</li>
-                    )
-                }
-            </ul>
-        </div>
-    );
+   return (
+      <div>
+         <h2 style={css}>{title}</h2>
+         <ul>
+            {
+               arr.map((item, index) => {
+                  return (<li key={index}>{index} / {item}</li>)
+               })
+            }
+         </ul>
+         <hr />
+         <ul>
+            {
+               arr.map((item, index) => <li key={index}>{index} / {item}</li>)
+            }
+         </ul>
+         <hr />
+         <ul>
+            {
+               data.map((item, index) => {
+                  return (<li key={item.id}>{item.id} / {item.name}</li>)
+               })
+            }
+         </ul>
+         <hr />
+         <ul>
+            {
+               data.map((item, index) =>
+                  <li key={item.id}>{item.id} / {item.name}</li>
+               )
+            }
+         </ul>
+      </div>
+   );
 };
 
 export default Test9;
