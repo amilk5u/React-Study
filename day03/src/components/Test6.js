@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import { useRef } from 'react'
+import { useState, useRef } from 'react'
+
+// onChange 함수 실행 (Html의 요소가 바뀌었을 때 실행한다)
 
 const Test7 = () => {
    const idRef = useRef(null)
@@ -21,6 +22,8 @@ const Test7 = () => {
       setUserId('')
       setUserPw('')
       idRef.current.focus()
+      console.log(idRef)
+      console.log(idRef.current)
    }
 
    return (
@@ -31,6 +34,10 @@ const Test7 = () => {
          <h2>
             id : {userId} / pw : {userPw}
          </h2>
+         <h3>
+            id : {userId} <br />
+            pw : {userPw}
+         </h3>
       </div>
    );
 };

@@ -18,22 +18,24 @@ const Test7Sub = ( {name, age, addr, bgColor, color, done} ) => {
     );
 };
 
+// PropsType 의 전달 받은 데이터의 유효성을 검증하기 위해서 사용한다(?)
 Test7Sub.propTypes = {
     name : PropTypes.string.isRequired,
     age : PropTypes.number.isRequired,
-    addr : PropTypes.string,
+    addr : PropTypes.string.isRequired,
     color : PropTypes.string,
     bgColor : PropTypes.string,
     done : PropTypes.bool,
 }
 
+// props의 초깃값을 정의합니다. (필수요소)
 Test7Sub.defaultProps = {
     name : '아무개',
     age : 20,
     addr : "서울",
     color : "red",
     bgColor : "blue",
-    done : false,
+    done : true,
 }
 
 /* 해당컴포넌트명.defaultProps = {
@@ -49,7 +51,7 @@ export default Test7Sub;
     JavaScript 콘솔을 통해 보일 것입니다. propTypes는 성능상의 이유로 
     개발 모드(Development mode) 에서만 확인될 것입니다.
 
-    컴포넌트 props의 필수 여부를 지정하거나 props 의 Datatype을 지정할때
+    컴포넌트 props의 ****필수 여부***를 지정하거나 props 의 Datatype을 지정할때
     사용 규칙에 맞지 않으면 warning 메세지 출력 - 개발모드F12
 
     import PropTypes from 'prop-types';

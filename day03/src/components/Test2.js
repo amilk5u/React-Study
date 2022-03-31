@@ -28,6 +28,9 @@ const Test2 = () => {
             <button onClick={onRemove}>classList.remove</button>
             <button onClick={onToggle}>classList.toggle</button>
          </div>
+
+
+         <p style={{padding:10, fontWeight:800, color:'red'}}>안녕하세요</p>
       </div>
    );
 };

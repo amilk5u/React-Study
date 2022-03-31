@@ -15,9 +15,8 @@ const Test5 = () => {
       setAge(age - 1)
    }
    // 컬러 변경
-   // 토글 - !not : !ture -> false, !false -> true
+   // 토글 - !not : !true -> false, !false -> true
    const onColor = () => {
-      // setIsColor(!false)
       setIsColor(!isColor)
    }
 
@@ -26,7 +25,7 @@ const Test5 = () => {
          <h2>backgroundColor : {isColor ? 'pink' : 'tomato'} </h2>
          <h2>나이 : {age}</h2>
          <p>
-            <button onClick={onColor}>배경바꾸기:true/false </button>
+            <button onClick={onColor}>배경바꾸기:{isColor ? 'true' : 'false'} </button>
             <button onClick={upAge}>증가</button>
             <button onClick={downAge}>감소</button>
             {/* <button onClick={onToggle}>classList.toggle</button> */}

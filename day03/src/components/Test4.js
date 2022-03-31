@@ -10,7 +10,7 @@ const Test4 = () => {
 
    return (
       <div>
-         <button onClick={onTest}>
+         <button onClick={onTest} className="box">
             <span>안녕하세요 누르세요</span>
             <br/>
             <br/>

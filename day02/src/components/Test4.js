@@ -12,7 +12,7 @@ const Test4 = () => {
         <>
             <p>{ done1 === true ? <button>확인</button>:<button>취소</button> }</p>
             <p>{ done1 && <span>참</span>}</p>
-            <p>{ done2 || "거짓"}</p>
+            <p>{ done2 || <span>거짓</span>}</p>
             <p>{ done3 || <button>조회된 게시글이 없습니다.</button>}</p>
         </>
     );
