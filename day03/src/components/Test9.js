@@ -11,6 +11,7 @@ const Test9 = () => {
         // setColor( e.target.value )
         const { value } = e.target 
         setText( value )
+        console.log(value)
     }
 
     return (
