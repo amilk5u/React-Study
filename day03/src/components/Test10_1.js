@@ -6,16 +6,17 @@ const Test10_1 = () => {
       2. 체크됨 true / 체크안됨 fasle
    */
    const [chk, setChk] = useState(false)
-   const onChk = () => {
-      setChk(!chk)
+   const onChk = (e) => {
+      const { checked } = e.target
+      setChk(checked)
    }
 
    return (
       <div>
-         <input style={{ width: 30, height: 30 }} onClick={onChk} type="checkbox" />
+         <input style={{ width: 30, height: 30 }} onChange={onChk} type="checkbox" checked={chk} />
          <p style={{
             fontSize: 40, margin: 0, fontWeight: 800,
-            color:chk ? 'red' : 'blue'
+            color: chk ? 'red' : 'blue'
          }}>야옹이가 화를 냅니다.</p>
       </div>
    );

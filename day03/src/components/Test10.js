@@ -6,7 +6,6 @@ const Test10 = () => {
     const onChk  = (e)  => {
         const { checked } = e.target 
         setIsChk( checked )
-        console.log(checked)
     }
 
     return (
