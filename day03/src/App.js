@@ -1,5 +1,5 @@
 // import Besiness from './components Besiness';
-import Business from './sample1/Business';
+import Business from './sample2/Business';
 
 const App = () => {
    return (
