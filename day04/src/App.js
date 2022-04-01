@@ -1,11 +1,11 @@
 // import './assets/css/reset.css'
-// import Gallery from './sample2/Gallery';
-import Test3_1 from './components/Test3_1';
+import Main from './sample1_1/Main';
+// import Test6 from './components/Test6';
 
 const App = () => {
   return (
     <div>
-      <Test3_1 />
+      <Main />
     </div>
   );
 };

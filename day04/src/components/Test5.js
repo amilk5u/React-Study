@@ -33,25 +33,41 @@ const Test5 = () => {
    }
 
    const onMod1 = () => {
-      setData(
-         data.map(item => {
-            if (item.id === 5) {
+      /*  setData(
+          data.map(item => {
+             if (item.id === 5) {
+                return {
+                   ...item,
+                   name: '전소민'
+                }
+             } else {
+                return item
+             }
+          })
+       ) */
+      // 하하를 이광수로 바꿔라
+
+      /* setData(
+         data.map((item => {
+            if ( item.name === '하하' ) {
                return {
                   ...item,
-                  name: '전소민'
+                  name : '이광수'
                }
             } else {
                return item
             }
-         })
-      )
+         }))
+      ) */
+
+      setData(data.map(item => item.name === '하하' ? {...item, name : '이광수'} : item))
    }
    const onMod2 = () => {
-      setData(data.map(item => item.id === 4 ? {...item, name:"이광수"} : item))
+      setData(data.map(item => item.id === 4 ? { ...item, name: "이광수" } : item))
    }
-   const onMod3 = (num) => { 
+   const onMod3 = (num) => {
       setData(
-         data.map(item => item.id === num ? {...item, name:'양세찬'} : item)
+         data.map(item => item.id === num ? { ...item, name: '양세찬' } : item)
       )
    }
 
