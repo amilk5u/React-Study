@@ -1,7 +1,7 @@
 import { useState } from "react";
 import BusinessList from "./BusinessList";
-import './style.css'
 import './../assets/css/reset.css'
+import './style.css'
 import dataApi from './../assets/api/businessData_1'
 
 const Business = () => {

@@ -1,66 +1,58 @@
 import { useState } from 'react'
 
-// 형제관계
-const Name = (props) => {
-   const [text, setText] = useState('')
+const Name = () => {
+   const [name, setName] = useState('아무개')
    const changeInput = (e) => {
       const { value } = e.target
-      setText(value)
+      setName(value)
    }
    return (
-      <div >
-         <h2 onClick={props.minJu}>Name 컴포넌트</h2>
-         <label>이름 </label>
-         <input type="text" value={text} onChange={changeInput} />
-         <span style={{ marginLeft: "10px" }}>{text}</span>
-      </div>
+      <>
+         <h2>Name 컴포넌트</h2>
+         <label>이름:</label>
+         <input type="text" value={name} onChange={changeInput} />
+         <span style={{ marginLeft: 10 }}> {name} </span>
+      </>
    );
 };
 
-// 형제관계
+
 const Display = ({ ani }) => {
    return (
-      <div>
+      <>
          <h2>Display 컴포넌트</h2>
-         <h3>내가 좋아하는 동물은 '{ani}' 입니다</h3>
-      </div>
+         <h1>내가 좋아하는 동물은 '{ani}' 입니다.</h1>
+      </>
    );
 };
 
-// 형제관계
-const Animal = ({ ani, onAni, minJu }) => {
+
+const Animail = ({ ani, onAni }) => {
    return (
-      <div>
-         <h2>Animal 컴포넌트</h2>
-         <label>동물 : </label>
-         <input type="text" value={ani} onChange={onAni} onClick={minJu} />
-         <span style={{ marginLeft: "10px" }}>{ani}</span>
-      </div>
+      <>
+         <h2>Animail 컴포넌트</h2>
+         <label>동물:</label>
+         <input type="text" value={ani} onChange={onAni} />
+         <span style={{ marginLeft: 10 }}>{ani}</span>
+      </>
    );
 };
 
-// 부모님
 const Test1 = () => {
-   const [ani, setAni] = useState('고양이')
+   const [ani, setAni] = useState('아무동물')
 
-   // 상태값이 있는 곳에서 바뀌는 (값)함수를 만들어줘야 한다
    const onAni = (e) => {
       const { value } = e.target
       setAni(value)
    }
-   const minJu = () => {
-      console.log('민주입니다')
-   }
-
    return (
-      <div>
-         <Name minJu={minJu}  />
-         <input value={setAni}/>
+      <>
+         <Name />
          <hr />
-         <Animal ani={ani} onAni={onAni} minJu={minJu} />
+         <Animail ani={ani} onAni={onAni} />
          <hr />
          <Display ani={ani} />
-      </div>
+      </>
    );
 };
 
