@@ -6,14 +6,14 @@ import './style.css'
 
 
 const Gallery = () => {
-    const [data, setData] = useState( datalist )
-    const [ cat , setCat ] = useState( data[0] )
-    
-    const onView  = (id) => {
+    const [data, setData] = useState(datalist)
+    const [cat, setCat] = useState(data[0])
+
+    const onView = (id) => {
         // alert('ddd')
         // setCat( data[ id - 1 ])
         //.find 
-        setCat( data.find( item => item.id === id ) )
+        setCat(data.find(item => item.id === id))
     }
 
     return (

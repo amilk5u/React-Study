@@ -1,12 +1,10 @@
-import React from 'react';
-
-const GalleryItem = ({ item , onView}) => {
-    const { id , imgurl } = item 
-    return (
-        <li onClick={() => onView(id) }>
-           <img src={imgurl} alt="" /> 
-        </li>
-    );
+const GalleryItem = ({ onSelct, item }) => {
+	const { id, imgUrl } = item
+	return (
+		<li onClick={() => onSelct(id)}>
+			<img src={imgUrl} />
+		</li>
+	);
 };
 
 export default GalleryItem;

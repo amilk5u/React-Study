@@ -3,7 +3,7 @@
 .wrap .bigview .bigimg { width: 600px; height: 400px; position: relative; margin-bottom: 20px; } 
 .wrap .bigview .bigimg h2 { position: absolute; left: 30px; top: 30px; font-size: 30px; color:#fff } 
 .wrap .bigview ul { display: flex; flex-wrap: wrap; } 
-.wrap .bigview ul li { width: 110px; margin-right: 10px; margin-bottom: 10px; } 
+.wrap .bigview ul li { width: 110px; margin-right: 10px; margin-bottom: 10px; cursor: pointer;} 
 .wrap .bigview ul li img { width:110px } 
 .wrap .text { width: 400px; background: #efefef; box-sizing: border-box; padding: 30px; } 
 .wrap .text strong { font-size: 30px; margin-bottom: 40px; display: block; } 
