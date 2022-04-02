@@ -9,7 +9,7 @@ const Test3 = () => {
       userEmail: ''
    })
    // form.userId , form.userPw
-   // 비구조할당 (form.xxx : 이런식으로 쓰기 귀찮기 때문에)
+   // 비구조할당 (form.xxx : 데이터가 많을 시 이런식으로 쓰기에 번거롭기 때문에)
    const { userId, userPw, userEmail } = form
 
    const changeInput = (e) => {

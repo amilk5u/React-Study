@@ -16,6 +16,9 @@ const Business = () => {
                <p>고객이 신뢰하는 글로벌 에너지 자원 선도 기업</p>
                { /* List 들어옴 */}
                <BusinessList data={data}/>
+               <p className="more">
+                  <a>View More</a>
+               </p>
             </div>
          </section>
       </>

@@ -1,9 +1,10 @@
-import Test6 from './components/Test6';
+// import Besiness from './components Besiness';
+import Business from './sample1/Business';
 
 const App = () => {
    return (
       <div>
-         <Test6 />
+         <Business />
       </div >
    );
 };

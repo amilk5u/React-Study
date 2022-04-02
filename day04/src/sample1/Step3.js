@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-// const Step3 = ({ form, onNext, onPrev }) => {
-//    const { userName, age, addr, tel, job, email, sex, inter } = form
-const Step3 = ({ userName, age, addr, tel, job, email, sex, inter, onNext, onPrev }) => {
+const Step3 = ({ form, onNext, onPrev }) => {
+   const { userName, age, addr, tel, job, email, sex, inter } = form
+// const Step3 = ({ userName, age, addr, tel, job, email, sex, inter, onNext, onPrev }) => {
    return (
       <>
          <ul>

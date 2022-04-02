@@ -1,4 +1,16 @@
 ** React 강의수업 내용 메모
+
+Live Server  // 라이브서버
+Korean Language Pack for Visual Studio Code  // 한국어패치
+Auto Close Tag  // 닫힘태그 자동생성
+Auto Complete Tag //태그 자동완성
+Auto Import // ?
+Auto Rename Tag // 태그 자동완성
+
+----------------------------
+
+Reactjs code snippets
+
 --22.03.13 (일)--
 
 src 폴더는 작업하는 공간
