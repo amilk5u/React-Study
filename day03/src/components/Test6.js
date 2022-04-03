@@ -17,7 +17,7 @@ const Test7 = () => {
       setUserPw(value)
    }
    const onReset = () => {
-      setUserId('')\m///////////////////////////////
+      setUserId('')
       setUserPw('')
       idRef.current.focus()
    }
