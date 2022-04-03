@@ -44,4 +44,31 @@ value e.target 복습하기
 
 리엑트로 퀵파인더 프로젝트만들면 포폴에 좋을듯??!! 무조건해보댲,,
 
+템플릿 리터널 - 백틱을 의미한다 
+
+삼항 연산자
+값이 없을 때는 false 를 뱉고, 값이 number 라던지, string, 'a' 하나라도
+들어있을 때 true 를 뱉는다. 
+
+&& : true 일때 오른쪽 값을 가져온다
+const box2 = "sss" && "tererre" // tererre (true) 
+const box11 = '  ' && 'sss'  // 빈 값 (false)
+const box11 = null && 'sss' // null (false)
+
+|| : false 일때 오른쪽 값을 가져온다
+const result3_1 = 'ㅇㅇㅇ'  || '거짓의 결과' // ㅇㅇㅇ (true)
+const result3 = false || '거짓의 결과' // 거짓의결과 (false)
+const result4 = undefined || '값이 존재 하지않음' // 값이 존재하지 않음 (false)
+
+concat() : 앞에 있는 것을 복사한다.
+arr1.concat(40) // arr1 을 복사하여 40을 추가한다
+
+onclick : 유저가 Html의 요소를 클릭했을때 이벤트 발생
+onchange : Html의 요소가 바뀌었을 때 (텍스트칸에 Value 값이 변경되었을 때)
+onkeydown : 유저가 키를 눌렀을 경우 이벤트 발생 (텍스트칸에 무언가를 썼을 때)
+onmouseover : 마우스가 Html 요소로 넘어갔을 때 이벤트 발생
+onmouserout : 마우스가 Html 요소에서 벗어났을 때 이벤트 발생
+
+
+
 

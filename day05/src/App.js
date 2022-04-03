@@ -1,12 +1,12 @@
-// import './assets/css/reset.css'
-// import Gallery from './sample2_1/Gallery';
-import Test1 from './components/Test1';
+import './assets/css/reset.css'
+import Todos from './sample1/Todos';
+// import Test4 from './components/Test4';
 
 const App = () => {
 	return (
-		<>
-			<Test1 />
-		</>
+		<div>
+			<Todos />
+		</div>
 	);
 };
 
