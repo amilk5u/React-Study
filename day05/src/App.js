@@ -1,11 +1,12 @@
 import './assets/css/reset.css'
-import Todos from './sample1/Todos';
-// import Test4 from './components/Test4';
+import Friend from './sample2/Friend';
+// import Test5 from './components/Test5';
 
 const App = () => {
 	return (
 		<div>
-			<Todos />
+			<Friend />
+			{/* <Test5 /> */}
 		</div>
 	);
 };
