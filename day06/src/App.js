@@ -4,12 +4,12 @@ import './assets/css/reset.css'
 import Customer from './sample1/Customer';
 
 const App = () => {
-  return (
-    <div>
-      {/* <Test7 /> */}
-      <Customer />
-    </div>
-  );
+   return (
+      <div>
+         {/* <Test7 /> */}
+         <Customer />
+      </div>
+   );
 };
 
 export default App;
