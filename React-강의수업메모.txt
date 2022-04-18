@@ -71,4 +71,48 @@ onmouserout : 마우스가 Html 요소에서 벗어났을 때 이벤트 발생
 
 
 
+day 07일차
+
+싸스 깔기
+1. yarn add sass
+2. yarn add styled-components
+
+부트스트랩깔기
+https://react-bootstrap.github.io/
+1. yarn add react-bootstrap bootstrap
+​
+ material깔기
+https://mui.com/
+1. npm 
+yarn add @mui/material @emotion/react @emotion/styled
+yarn add @mui/material @mui/styled-engine-sc styled-components
+3. svg icon
+yarn add @mui/icons-material
+
+
+material은 부트스트랩과 같은 css 플러그인이다.
+
+비동기 처리 + styled-components
+yarn add sass
+yarn add styled-components
+yarn add axios
+yarn add styled-reset
+yarn add react-masonry-css
+
+
+vs code
+js styler 자동완성 플러그인
+vscode-styled-components
+
+
+뉴스 키 : 28d42ed463ff47d7a459b2c6a009f5c0
+
+
+
+
+
+빠트린부분
+Test5 전체 .....Test5.scss 복사하기
+
+
 

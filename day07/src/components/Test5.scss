@@ -1,0 +1,43 @@
+// 변수
+$red:red;
+$green:green;
+$pink:pink;
+$blue:blue;
+$skyblue:skyblue;
+$hotpink:hotpink;
+
+
+@mixin size( $w ) {
+    $width : 100px;
+    @if $w % 2 == 0 {
+        $width : $width + 20;
+    } @else if  $w % 3 == 0 {
+        $width : $width - 20;
+    }@else {
+        $width : $width;
+    }
+
+    width:$width;
+    height: 50px * 2 ;
+    line-height: 50px * 2 ;
+    transition: 0.5s;
+    text-align: center;
+    &:hover{
+        transform: scale(1.3) rotate(180deg);
+    }
+}
+
+.wrap {
+    margin: auto; display: flex; justify-content: space-between;;
+    .box {
+        // &:선택자{}
+        &.red { background: $red; @include size(1);}
+        &.green { background: $green; @include size(2); }
+        &.pink { background: $pink; @include size(3); }
+        &.blue { background: $blue; @include size(4); }
+        &.skyblue { background: $skyblue; @include size(5); }
+        &.hotpink { background: $hotpink; @include size(6); }
+    }
+}
+
+// .wrap .box {}
