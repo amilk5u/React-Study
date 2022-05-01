@@ -1,22 +1,23 @@
 import React from 'react';
-import styled from 'styled-components';
+import { ImageBox } from '../styled/pixastyle'
 
-const ImageBox = styled.article``
 
-const GalleryItem = ({item}) => {
-    
-    return (
-        <ImageBox>
-            <img src="" alt="" />
-            <h2>타이틀</h2>
-            <ul>
-                <li>조회수:</li>
-                <li>다운로드:</li>
-                <li>좋아요:</li>
-            </ul>
-            <p> 태그  #xxx </p>
-        </ImageBox>
-    );
+const GalleryItem = ({ item }) => {
+   const { view, downloads, likes, webformatURL, tags, user } = item
+   const tagList = tags.split(',')
+
+   return (
+      <ImageBox>
+         <img src={webformatURL} alt="" />
+         <h2>{user}</h2>
+         <ul>
+            <li>조회수: {view}</li>
+            <li>다운로드: {downloads}</li>
+            <li>좋아요: {likes}</li>
+         </ul>
+         <p>{tagList.map((item, index) => <span key={index}>#{item.trim()}</span>)}</p>
+      </ImageBox>
+   );
 };
 
 export default GalleryItem;

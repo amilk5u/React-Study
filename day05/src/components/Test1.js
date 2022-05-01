@@ -6,14 +6,14 @@ const Test1 = () => {
    ])
 
    // length 로 사용하지 않는다. 고유번호가 아니기 때문에 중간에 삭제가 되었을시 찾아가기 어렵다.
-   const onAdd1 = () => {
+   /* const onAdd1 = () => {
       setData(data.concat({
          id: data.length,
          text: '유재석' + Math.floor(Math.random() * 10)
       }))
-   }
+   } */
 
-   const onAdd = () => {
+   /* const onAdd = () => {
       setData([
          ...data,
          {
@@ -21,21 +21,35 @@ const Test1 = () => {
             text: '송지효' + Math.floor(Math.random() * 10)
          }
       ])
+   } */
+
+   const onAdd2 = () => {
+      console.log("ddd")
+      setData([
+         ...data,
+         {
+            id : data.length,
+            text : '송지효' + Math.floor(Math.random() * 5)
+         }
+      ])
    }
-
-
 
    return (
       <>
          <h2>데이터 추가</h2>
-         <button onClick={onAdd}>추가</button>
+         <button onClick={onAdd2}>추가</button>
          <hr />
          <ul>
-            {
+            {/* {
                data.map((item, index) => {
                   return <li key={index}>
                      {item.id} / {item.text} / index : {index}
                   </li>
+               })
+            } */}
+            {
+               data.map((item, index) => {
+                  return <li key={index}>{item.id} / {item.text} / {index}</li>
                })
             }
          </ul>

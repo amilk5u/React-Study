@@ -1,13 +1,13 @@
-import { useState, useRef } from 'react'
+import React, { useRef, useState } from 'react';
+
 const Test2 = () => {
-   const no = useRef(1)
+   //고유번호처리 
+   const no = useRef(1) //초기값
    const [data, setData] = useState([])
-   const names = '유재석,송지효,김종국,하하,전소민,양세찬,지석진,신민주,강개리,이광수'.split(",")
-   //mdn 문자열 - 배열로
-   // const nameArr = name.split(",");
+   const names = '김다미,최우식,유재석,김희선,최진우,송혜교,전지현,이승기,강호동,송소희'.split(',')
 
    const onAdd = () => {
-      const ran = Math.floor(Math.random() * names.length)
+      const ran = Math.floor(Math.random() * names.length) // names 의 갯수만큼 랜덤값으로 나타내라
       setData([
          ...data,
          {
@@ -17,20 +17,17 @@ const Test2 = () => {
       ])
    }
    return (
-      <div>
+      <>
          <button onClick={onAdd}>추가</button>
          <hr />
-
          <ul>
             {
                data.map((item, index) => {
-                  return <li key={item.id}>
-                     {item.id} / {index.text}
-                  </li>
+                  return <li key={item.id}>{item.id} / {item.text}</li>
                })
             }
          </ul>
-      </div>
+      </>
    );
 };
 

@@ -11,7 +11,6 @@ const Test5 = () => {
 	const [data, setData] = useState(dataList)
 	const changeInput = (e) => {
 		const { checked, name } = e.target
-
 		if (name === 'all') {
 			setData(data.map(item => {
 				return {
@@ -19,7 +18,6 @@ const Test5 = () => {
 					isChecked: checked
 				}
 			}))
-
 		} else {
 			setData(data.map(item => item.name === name ?
 				{ ...item, isChecked: checked } : item)
